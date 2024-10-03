@@ -1,9 +1,12 @@
 #pragma once
 #include <stdexcept>
+#include <string>
 
 class Garbage {
 public:
-    Garbage() {
-        throw std::logic_error("Garbage class in not implemented yet!");
-    };
+    Garbage(std::string name);
+    std::string toString() const;
+
+private:
+    std::string const _name;
 };

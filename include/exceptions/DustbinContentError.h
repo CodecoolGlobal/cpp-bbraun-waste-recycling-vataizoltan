@@ -1,9 +1,12 @@
 #pragma once
 #include <stdexcept>
+#include "PaperGarbage.h"
+#include "PlasticGarbage.h"
 
 class DustbinContentError {
 public:
-   DustbinContentError() {
-      throw std::logic_error("DustbinContentError class in not implemented yet!");
-   };
+   DustbinContentError(std::string const& msg);
+private:
+   std::string const _msg;
 };
+
